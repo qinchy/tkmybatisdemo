@@ -7,7 +7,6 @@
     <result column="sataus" property="sataus" jdbcType="INTEGER" />
     <result column="note" property="note" jdbcType="VARCHAR" />
   </resultMap>
-  <!--
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -195,5 +194,4 @@
       note = #{note,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  -->
 </mapper>
