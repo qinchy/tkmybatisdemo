@@ -1,8 +1,10 @@
 package com.qinchy.tkmybatisdemo.dao;
 
 import com.qinchy.tkmybatisdemo.model.Orders;
+import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.Mapper;
 
+@Component
 public interface OrdersMapper extends Mapper<Orders> {
 
     /*
