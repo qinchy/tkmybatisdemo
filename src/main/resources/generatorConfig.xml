@@ -6,6 +6,10 @@
     <classPathEntry location="D:\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar"/>
 
     <context id="DB2Tables" targetRuntime="MyBatis3">
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+        </plugin>
+        
         <commentGenerator>
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
@@ -40,10 +44,8 @@
         </javaClientGenerator>
 
         <!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-        <!--
         <table tableName="student" domainObjectName="Student" enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>
-        -->
 
         <table tableName="orders" domainObjectName="Orders" enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"/>

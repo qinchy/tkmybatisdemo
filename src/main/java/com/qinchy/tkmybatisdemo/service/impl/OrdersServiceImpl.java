@@ -17,7 +17,6 @@ public class OrdersServiceImpl implements OrdersService {
 
     @Override
     public List<Orders> findAll() {
-        OrdersExample ordersExample = new OrdersExample();
-        return ordersMapper.selectByExample(ordersExample);
+        return ordersMapper.selectAll();
     }
 }

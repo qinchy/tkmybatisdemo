@@ -17,7 +17,6 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> findAll() {
-        StudentExample studentExample = new StudentExample();
-        return studentMapper.selectByExample(studentExample);
+        return studentMapper.selectAll();
     }
 }
