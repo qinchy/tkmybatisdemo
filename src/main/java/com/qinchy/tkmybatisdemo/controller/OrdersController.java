@@ -23,7 +23,7 @@ public class OrdersController {
     }
 
     @GetMapping(path = "/orders/findByPage")
-    public PageInfo<Orders> findByPage(@RequestParam("pageNum") Integer pageNum, 
+    public PageInfo<Orders> findByPage(@RequestParam("pageNum") Integer pageNum,
                                        @RequestParam("pageSize") Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         List<Orders> orders = ordersService.findAll();
