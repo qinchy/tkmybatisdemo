@@ -1,6 +1,5 @@
 package com.qinchy.tkmybatisdemo.controller;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qinchy.tkmybatisdemo.model.Orders;
@@ -24,7 +23,8 @@ public class OrdersController {
     }
 
     @GetMapping(path = "/orders/findByPage")
-    public PageInfo<Orders> findByPage(@RequestParam("pageNum") Integer pageNum,@RequestParam("pageSize") Integer pageSize){
+    public PageInfo<Orders> findByPage(@RequestParam("pageNum") Integer pageNum, 
+                                       @RequestParam("pageSize") Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         List<Orders> orders = ordersService.findAll();
         return new PageInfo<Orders>(orders);
